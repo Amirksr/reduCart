@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import "./Navbar.css";
 import { BsCart4 } from "react-icons/bs";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
 
 function Navbar() {
-  const { addedToCart } = useContext(AppContext).state;
+  const addedToCart = useSelector((store) => store.addedProducts);
 
   return (
     <nav>
