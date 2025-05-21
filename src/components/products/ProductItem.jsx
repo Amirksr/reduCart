@@ -1,20 +1,11 @@
 import "./ProductItem.css";
 import productsList from "../../db";
-import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import { useDispatch } from "react-redux";
 
 function ProductItem(data) {
   const { id, name, price, image } = data;
-
-  const { dispatch } = useContext(AppContext);
-
-  const addToCartHandler = () => {
-    dispatch({ type: "ADD_TO_CART", data });
-  };
-
-  const isProductExistInCart = () => {
-    return addedProducts.some((product) => product.id == id);
-  };
+  const dispatch = useDispatch();
+  const addToCartHandler = () => dispatch({ type: "ADD_TO_CART", data });
 
   return (
     <div className="productCard">

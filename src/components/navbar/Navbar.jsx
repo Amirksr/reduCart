@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const addedToCart = useSelector((store) => store.addedProducts);
+  const addedToCart = useSelector((store) => store.addedToCart);
 
   return (
     <nav>
