@@ -1,15 +1,12 @@
-import { useContext } from "react";
 import "./ProductItemInCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { AppContext } from "../../context/AppContext";
+import { useDispatch } from "react-redux";
 
 function ProductItemInCart({ id, name, price, image, count, totalPrice }) {
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
 
   const decreaseHandler = () => dispatch({ type: "DECREASE_IN_CART", id });
-
   const increaseHandler = () => dispatch({ type: "INCREASE_IN_CART", id });
-
   const removeHandler = () => dispatch({ type: "REMOVE_FROM_CART", id });
 
   return (
