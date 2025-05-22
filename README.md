@@ -8,6 +8,10 @@
 - Improve **code clarity** and **maintainability** by organizing the project into modular components and folders.
 - Demonstrate best practices in **React state management** using Redux.
 
+## 🚀 Live Demo
+
+Check out the live version of the project here: [reduCart Demo on Vercel](https://redu-cart.vercel.app)
+
 ## 🛠️ Tech Stack
 
 - **React** — UI Library  
