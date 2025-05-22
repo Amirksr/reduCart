@@ -1,10 +1,10 @@
 # 🛒 reduCart
 
-**reduCart** is a simple and elegant shopping cart application built with **React** and **Redux**. The main purpose of this project is to **refactor the reducer logic using deep copy concepts** to ensure state immutability and maintain cleaner state transitions.
+**reduCart** is a simple and elegant shopping cart application built with **React** and **Redux**. The main purpose of this project is to **refactor the reducer logic using safe immutability techniques** (like `.map()` and object spread) to ensure clean and predictable state updates.
 
 ## 🎯 Project Objectives
 
-- Refactor Redux reducers using **deep copy** to prevent direct state mutations.
+- Refactor Redux reducers using **safe immutable patterns** to prevent direct state mutations.
 - Improve **code clarity** and **maintainability** by organizing the project into modular components and folders.
 - Demonstrate best practices in **React state management** using Redux.
 
@@ -65,13 +65,14 @@ reduCart/
 └── .gitignore
 ```
 
-## 🔍 Deep Copy Refactoring
+## 🔍 Reducer Refactoring
 
-The heart of this project lies in the file `src/Redux/reducer.js`, where the reducer logic has been **refactored using deep copy** (`JSON.parse(JSON.stringify(...))`) to avoid mutating nested objects within the state. This ensures:
+The reducer logic in `src/Redux/reducer.js` has been **refactored using `.map()` and object spread syntax** to create new references for updated data. This technique:
 
-- Predictable state updates
-- Better debugging and testing
-- Compliance with Redux best practices
+- Ensures immutability of state
+- Prevents accidental state mutation
+- Supports Redux principles for pure reducer functions
+- Makes debugging and testing more reliable
 
 ## ⚙️ Getting Started
 
@@ -102,7 +103,7 @@ Open your browser at [http://localhost:5173](http://localhost:5173)
 - Add or remove products from the cart
 - Adjust product quantities
 - Responsive and modular UI components
-- Deep copy based reducer logic
+- Immutability ensured using `.map()` and object spread
 
 ## 🚧 Future Improvements
 
